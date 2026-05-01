@@ -23,7 +23,6 @@
         url("jungle.jpg");
       background-size: cover;
       background-position: center;
-      position: relative;
     }
 
     header {
@@ -34,51 +33,19 @@
       padding-bottom: 18px;
     }
 
+    /* 🔥 로고 (원래 버전) */
     .logo {
-      display: inline-block;
-    }
-
-    .logo-box {
-      background:
-        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.45)),
-        repeating-linear-gradient(
-          90deg,
-          #3a2a18,
-          #3a2a18 5px,
-          #2f2113 5px,
-          #2f2113 10px
-        );
-      padding: 14px 20px 16px;
-      border-radius: 7px;
-      text-align: center;
-      box-shadow:
-        inset 0 0 12px rgba(0,0,0,0.65),
-        0 5px 14px rgba(0,0,0,0.55);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .fire {
-      font-size: 20px;
-      line-height: 1;
-      margin-bottom: 5px;
-      filter: drop-shadow(0 0 6px rgba(255,130,0,0.7));
-    }
-
-    .logo-text {
       font-size: 28px;
       font-weight: 900;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       color: #f4ead0;
-      line-height: 0.95;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      line-height: 1.2;
     }
 
-    .logo-sub {
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 6px;
+    .logo span {
+      font-size: 14px;
+      letter-spacing: 4px;
       color: #d6b66b;
-      margin-top: 5px;
     }
 
     nav a {
@@ -133,7 +100,6 @@
       text-align: center;
       font-size: 38px;
       margin-bottom: 12px;
-      color: #f4ead0;
     }
 
     .section-subtitle {
@@ -180,12 +146,10 @@
     .card h3 {
       font-size: 24px;
       margin: 0 0 12px;
-      color: #f4ead0;
     }
 
     .card p {
       font-size: 15px;
-      line-height: 1.6;
       color: #d8cfad;
       margin: 0;
     }
@@ -196,21 +160,20 @@
       padding: 28px;
       color: #b9aa7d;
       font-weight: 800;
-      letter-spacing: 2px;
     }
 
     @media (max-width: 700px) {
       header {
-        display: block;
+        flex-direction: column;
         text-align: center;
       }
 
       nav {
-        margin-top: 18px;
+        margin-top: 12px;
       }
 
       nav a {
-        margin: 0 8px;
+        margin: 0 10px;
         font-size: 14px;
       }
 
@@ -226,11 +189,8 @@
   <section class="hero">
     <header>
       <div class="logo">
-        <div class="logo-box">
-          <div class="fire">🔥</div>
-          <div class="logo-text">XANW</div>
-          <div class="logo-sub">GRILLS</div>
-        </div>
+        XANW<br>
+        <span>GRILLS</span>
       </div>
 
       <nav>
@@ -266,42 +226,42 @@
         <div class="week">1주차</div>
         <div class="icon">🎒</div>
         <h3>생존준비</h3>
-        <p>생존가방, 필수 장비, 비상 상황 대비법을 정리합니다.</p>
+        <p>생존가방, 필수 장비 구성</p>
       </div>
 
       <div class="card">
         <div class="week">2주차</div>
         <div class="icon">🌿</div>
         <h3>자원학</h3>
-        <p>물, 식량, 주변 자원을 확보하고 활용하는 방법을 배웁니다.</p>
+        <p>물, 식량 확보 전략</p>
       </div>
 
       <div class="card">
         <div class="week">3주차</div>
         <div class="icon">⛺</div>
         <h3>거점학</h3>
-        <p>안전한 장소를 고르고 임시 거점을 구축하는 기술을 익힙니다.</p>
+        <p>안전한 생존 거점 구축</p>
       </div>
 
       <div class="card">
         <div class="week">4주차</div>
         <div class="icon">🔥</div>
         <h3>에너지학</h3>
-        <p>불, 조명, 보온, 전력 등 생존 에너지를 다룹니다.</p>
+        <p>불, 보온, 에너지 활용</p>
       </div>
 
       <div class="card">
         <div class="week">5주차</div>
         <div class="icon">✚</div>
         <h3>구급학</h3>
-        <p>상처, 출혈, 탈수 등 응급 상황 대처법을 배웁니다.</p>
+        <p>응급 상황 대응</p>
       </div>
 
       <div class="card">
         <div class="week">6주차</div>
         <div class="icon">🧭</div>
         <h3>이동학</h3>
-        <p>방향 감각, 이동 계획, 피난 루트를 정리합니다.</p>
+        <p>생존 이동 전략</p>
       </div>
     </div>
   </section>
