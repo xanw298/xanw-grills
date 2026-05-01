@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XANW GRILLS</title>
 
   <style>
@@ -10,185 +10,173 @@
 
     body {
       margin: 0;
-      font-family: "Noto Sans KR", sans-serif;
-      background: #0b1208;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: #10170d;
       color: #f4ead0;
     }
 
-    /* 🔥 HERO */
     .hero {
       min-height: 100vh;
       padding: 32px 7%;
       background:
-        linear-gradient(rgba(5,12,5,0.45), rgba(5,12,5,0.8)),
+        linear-gradient(rgba(5, 12, 5, 0.45), rgba(5, 12, 5, 0.7)),
         url("jungle.jpg");
       background-size: cover;
       background-position: center;
+      position: relative;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(244,234,208,0.2);
-      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(244, 234, 208, 0.2);
+      padding-bottom: 18px;
     }
 
-    /* 🔥 로고 (시안 느낌) */
     .logo {
+      font-size: 34px;
       font-weight: 900;
-      line-height: 1;
-    }
-
-    .logo-main {
-      font-size: 38px;
       letter-spacing: 3px;
+      line-height: 0.9;
     }
 
-    .logo-sub {
-      font-size: 16px;
-      letter-spacing: 6px;
+    .logo span {
+      font-size: 18px;
+      letter-spacing: 5px;
       color: #d6b66b;
     }
 
     nav a {
       color: #f4ead0;
       text-decoration: none;
-      margin-left: 28px;
+      margin-left: 34px;
       font-weight: 700;
-      opacity: 0.9;
     }
 
-    nav a:hover {
-      color: #9fc653;
-    }
-
-    /* 🔥 메인 텍스트 */
     .main {
       margin-top: 120px;
-      max-width: 700px;
+      max-width: 720px;
     }
 
     .main h1 {
-      font-size: clamp(40px, 7vw, 72px);
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.15;
+      margin: 0;
       font-weight: 900;
-      line-height: 1.2;
-      text-shadow: 0 6px 30px rgba(0,0,0,0.7);
+      text-shadow: 0 4px 18px rgba(0,0,0,0.5);
     }
 
-    .main strong {
+    .main h1 strong {
       color: #9fc653;
     }
 
     .main p {
-      margin-top: 20px;
       font-size: 20px;
       line-height: 1.7;
-      color: #e6dbb8;
+      color: #f1e5c5;
+      margin-top: 24px;
     }
 
     .button {
       display: inline-block;
       margin-top: 24px;
-      padding: 14px 26px;
+      padding: 16px 28px;
       border: 1px solid #9fc653;
       border-radius: 8px;
-      background: rgba(50,70,20,0.5);
       color: #f4ead0;
       text-decoration: none;
       font-weight: 800;
-      transition: 0.2s;
+      background: rgba(58, 76, 24, 0.55);
     }
 
-    .button:hover {
-      background: rgba(80,110,40,0.7);
-    }
-
-    /* 🔥 커리큘럼 */
-    .section {
+    .curriculum-section {
       background: linear-gradient(#182210, #0d1409);
-      padding: 80px 7%;
+      padding: 70px 7%;
     }
 
-    .section h2 {
+    .section-title {
       text-align: center;
       font-size: 38px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      color: #f4ead0;
     }
 
-    .section p {
+    .section-subtitle {
       text-align: center;
       color: #c8b98e;
-      margin-bottom: 40px;
+      margin-bottom: 38px;
     }
 
-    .grid {
+    .curriculum {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 18px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
-    /* 🔥 카드 */
     .card {
-      background: rgba(20,35,15,0.85);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(214,182,107,0.3);
+      background: rgba(26, 42, 18, 0.86);
+      border: 1px solid rgba(214, 182, 107, 0.35);
       border-radius: 18px;
-      padding: 26px;
+      padding: 28px 20px;
       text-align: center;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
       transition: 0.2s;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     .card:hover {
       transform: translateY(-6px);
-      background: rgba(40,60,25,0.95);
+      background: rgba(38, 58, 25, 0.95);
     }
 
     .week {
       color: #d6b66b;
       font-weight: 900;
-      margin-bottom: 10px;
+      font-size: 22px;
+      margin-bottom: 18px;
     }
 
     .icon {
       font-size: 42px;
-      margin: 10px 0;
+      margin-bottom: 16px;
     }
 
     .card h3 {
-      margin: 10px 0;
-      font-size: 22px;
+      font-size: 24px;
+      margin: 0 0 12px;
+      color: #f4ead0;
     }
 
     .card p {
-      font-size: 14px;
+      font-size: 15px;
+      line-height: 1.6;
       color: #d8cfad;
+      margin: 0;
     }
 
     footer {
-      background: #060a04;
+      background: #070b05;
       text-align: center;
-      padding: 26px;
+      padding: 28px;
       color: #b9aa7d;
       font-weight: 800;
+      letter-spacing: 2px;
     }
 
-    /* 🔥 모바일 */
     @media (max-width: 700px) {
       header {
-        flex-direction: column;
+        display: block;
         text-align: center;
       }
 
       nav {
-        margin-top: 12px;
+        margin-top: 18px;
       }
 
       nav a {
-        margin: 0 10px;
+        margin: 0 8px;
         font-size: 14px;
       }
 
@@ -202,86 +190,82 @@
 <body>
 
   <section class="hero">
-
     <header>
       <div class="logo">
-        <div class="logo-main">XANW</div>
-        <div class="logo-sub">GRILLS</div>
+        XANW<br>
+        <span>GRILLS</span>
       </div>
 
       <nav>
         <a href="#">홈</a>
-        <a href="#cur">커리큘럼</a>
-        <a href="#">장비</a>
-        <a href="#">생존기록</a>
+        <a href="#curriculum">커리큘럼</a>
+        <a href="#">장비 가이드</a>
+        <a href="#">생존 노트</a>
       </nav>
     </header>
 
     <div class="main">
       <h1>
-        생존은 선택이 아니다.<br>
-        <strong>준비된 자만이 살아남는다.</strong>
+        생존은 선택이 아니라 준비다.<br>
+        <strong>위기는 언제든 찾아온다.</strong>
       </h1>
 
       <p>
-        XANW GRILLS는 실제 생존 상황을 기반으로  
-        준비, 자원, 거점, 에너지, 구급, 이동까지  
-        체계적인 생존 지식을 제공한다.
+        XANW GRILLS는 실제 생존 상황을 기반으로
+        생존 준비, 자원 확보, 거점 구축, 에너지 활용,
+        응급 대처와 이동 기술을 체계적으로 정리합니다.
       </p>
 
-      <a href="#cur" class="button">커리큘럼 보기</a>
+      <a href="#curriculum" class="button">커리큘럼 보기</a>
     </div>
-
   </section>
 
-  <section class="section" id="cur">
-    <h2>생존 커리큘럼</h2>
-    <p>6주 완성 생존 프로그램</p>
+  <section class="curriculum-section" id="curriculum">
+    <h2 class="section-title">생존 커리큘럼</h2>
+    <p class="section-subtitle">기초부터 실전까지, 6주 생존 프로그램</p>
 
-    <div class="grid">
-
+    <div class="curriculum">
       <div class="card">
         <div class="week">1주차</div>
         <div class="icon">🎒</div>
         <h3>생존준비</h3>
-        <p>생존가방과 필수 장비 구성</p>
+        <p>생존가방, 필수 장비, 비상 상황 대비법을 정리합니다.</p>
       </div>
 
       <div class="card">
         <div class="week">2주차</div>
         <div class="icon">🌿</div>
         <h3>자원학</h3>
-        <p>물, 식량 확보 전략</p>
+        <p>물, 식량, 주변 자원을 확보하고 활용하는 방법을 배웁니다.</p>
       </div>
 
       <div class="card">
         <div class="week">3주차</div>
         <div class="icon">⛺</div>
         <h3>거점학</h3>
-        <p>안전한 생존 거점 구축</p>
+        <p>안전한 장소를 고르고 임시 거점을 구축하는 기술을 익힙니다.</p>
       </div>
 
       <div class="card">
         <div class="week">4주차</div>
         <div class="icon">🔥</div>
         <h3>에너지학</h3>
-        <p>불, 보온, 에너지 활용</p>
+        <p>불, 조명, 보온, 전력 등 생존 에너지를 다룹니다.</p>
       </div>
 
       <div class="card">
         <div class="week">5주차</div>
         <div class="icon">✚</div>
         <h3>구급학</h3>
-        <p>응급 상황 대응</p>
+        <p>상처, 출혈, 탈수 등 응급 상황 대처법을 배웁니다.</p>
       </div>
 
       <div class="card">
         <div class="week">6주차</div>
         <div class="icon">🧭</div>
         <h3>이동학</h3>
-        <p>생존 이동 전략</p>
+        <p>방향 감각, 이동 계획, 피난 루트를 정리합니다.</p>
       </div>
-
     </div>
   </section>
 
