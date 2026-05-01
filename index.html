@@ -1,79 +1,188 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XANW GRILLS</title>
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: white;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: #10170d;
+      color: #f4ead0;
     }
 
     .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: #1a1a1a;
+      min-height: 100vh;
+      padding: 32px 7%;
+      background:
+        linear-gradient(rgba(5, 12, 5, 0.45), rgba(5, 12, 5, 0.7)),
+        url("jungle.jpg");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(244, 234, 208, 0.2);
+      padding-bottom: 18px;
     }
 
     .logo {
-      font-size: 48px;
+      font-size: 34px;
       font-weight: 900;
-      letter-spacing: 4px;
-      margin-bottom: 20px;
+      letter-spacing: 3px;
+      line-height: 0.9;
     }
 
-    .subtitle {
+    .logo span {
       font-size: 18px;
-      color: #aaa;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
+      letter-spacing: 5px;
+      color: #d6b66b;
     }
 
-    .section {
-      padding: 60px 20px;
-      background: #fff;
-      color: #111;
+    nav a {
+      color: #f4ead0;
+      text-decoration: none;
+      margin-left: 34px;
+      font-weight: 700;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
+    .main {
+      margin-top: 120px;
+      max-width: 720px;
     }
 
-    h2 {
-      border-left: 6px solid #ff5500;
-      padding-left: 12px;
-      margin-bottom: 30px;
+    .main h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.15;
+      margin: 0;
+      font-weight: 900;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.5);
+    }
+
+    .main h1 strong {
+      color: #9fc653;
+    }
+
+    .main p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #f1e5c5;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 16px 28px;
+      border: 1px solid #9fc653;
+      border-radius: 8px;
+      color: #f4ead0;
+      text-decoration: none;
+      font-weight: 800;
+      background: rgba(58, 76, 24, 0.55);
+    }
+
+    .curriculum-section {
+      background: linear-gradient(#182210, #0d1409);
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 12px;
+      color: #f4ead0;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #c8b98e;
+      margin-bottom: 38px;
     }
 
     .curriculum {
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .week {
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 14px;
-      font-weight: 700;
+    .card {
+      background: rgba(26, 42, 18, 0.86);
+      border: 1px solid rgba(214, 182, 107, 0.35);
+      border-radius: 18px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
       transition: 0.2s;
     }
 
-    .week:hover {
-      transform: translateY(-3px);
-      background: #ffe5d9;
+    .card:hover {
+      transform: translateY(-6px);
+      background: rgba(38, 58, 25, 0.95);
+    }
+
+    .week {
+      color: #d6b66b;
+      font-weight: 900;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin: 0 0 12px;
+      color: #f4ead0;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #d8cfad;
+      margin: 0;
     }
 
     footer {
+      background: #070b05;
       text-align: center;
-      padding: 30px;
-      background: #111;
-      font-weight: 700;
+      padding: 28px;
+      color: #b9aa7d;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        display: block;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 18px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .main {
+        margin-top: 80px;
+      }
     }
   </style>
 </head>
@@ -81,30 +190,82 @@
 <body>
 
   <section class="hero">
-    <div class="logo">XANW GRILLS</div>
+    <header>
+      <div class="logo">
+        XANW<br>
+        <span>GRILLS</span>
+      </div>
 
-    <div class="subtitle">
-      생존은 선택이 아니라 준비다.<br>
-      위기는 언제든 찾아온다.<br>
-      XANW GRILLS는 실제 상황에서 살아남기 위한
-      지식과 전략을 공유한다.
+      <nav>
+        <a href="#">홈</a>
+        <a href="#curriculum">커리큘럼</a>
+        <a href="#">장비 가이드</a>
+        <a href="#">생존 노트</a>
+      </nav>
+    </header>
+
+    <div class="main">
+      <h1>
+        생존은 선택이 아니라 준비다.<br>
+        <strong>위기는 언제든 찾아온다.</strong>
+      </h1>
+
+      <p>
+        XANW GRILLS는 실제 생존 상황을 기반으로
+        생존 준비, 자원 확보, 거점 구축, 에너지 활용,
+        응급 대처와 이동 기술을 체계적으로 정리합니다.
+      </p>
+
+      <a href="#curriculum" class="button">커리큘럼 보기</a>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
+  <section class="curriculum-section" id="curriculum">
+    <h2 class="section-title">생존 커리큘럼</h2>
+    <p class="section-subtitle">기초부터 실전까지, 6주 생존 프로그램</p>
 
-      <h2>생존 커리큘럼</h2>
-
-      <div class="curriculum">
-        <div class="week">1주차 · 생존준비</div>
-        <div class="week">2주차 · 자원학</div>
-        <div class="week">3주차 · 거점학</div>
-        <div class="week">4주차 · 에너지학</div>
-        <div class="week">5주차 · 구급학</div>
-        <div class="week">6주차 · 이동학</div>
+    <div class="curriculum">
+      <div class="card">
+        <div class="week">1주차</div>
+        <div class="icon">🎒</div>
+        <h3>생존준비</h3>
+        <p>생존가방, 필수 장비, 비상 상황 대비법을 정리합니다.</p>
       </div>
 
+      <div class="card">
+        <div class="week">2주차</div>
+        <div class="icon">🌿</div>
+        <h3>자원학</h3>
+        <p>물, 식량, 주변 자원을 확보하고 활용하는 방법을 배웁니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="week">3주차</div>
+        <div class="icon">⛺</div>
+        <h3>거점학</h3>
+        <p>안전한 장소를 고르고 임시 거점을 구축하는 기술을 익힙니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="week">4주차</div>
+        <div class="icon">🔥</div>
+        <h3>에너지학</h3>
+        <p>불, 조명, 보온, 전력 등 생존 에너지를 다룹니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="week">5주차</div>
+        <div class="icon">✚</div>
+        <h3>구급학</h3>
+        <p>상처, 출혈, 탈수 등 응급 상황 대처법을 배웁니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="week">6주차</div>
+        <div class="icon">🧭</div>
+        <h3>이동학</h3>
+        <p>방향 감각, 이동 계획, 피난 루트를 정리합니다.</p>
+      </div>
     </div>
   </section>
 
