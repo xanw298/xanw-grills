@@ -143,6 +143,20 @@
       font-size: 22px;
     }
 
+    .curriculum-header {
+  max-width: 600px;
+  margin: 0 auto 40px;
+
+  padding: 24px 32px;
+  border-radius: 18px;
+
+  background: rgba(10, 18, 8, 0.45); 
+  backdrop-filter: blur(8px);        
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4); 
+  border: 1px solid rgba(214, 182, 107, 0.2);
+}
+    
     .curriculum-section {
   padding: 90px 7%;
   background:
@@ -290,9 +304,11 @@
  </section>
 
   <section class="curriculum-section" id="curriculum">
-    <h2 class="section-title">생존 커리큘럼</h2>
-    <p class="section-subtitle">기초부터 실전까지, 6주 생존 프로그램</p>
-
+    <div class="curriculum-header">
+  <h2 class="section-title">생존 커리큘럼</h2>
+  <p class="section-subtitle">기초부터 실전까지, 6주 생존 프로그램</p>
+</div>
+    
     <div class="curriculum">
       <div class="card"><div class="week">1주차</div><div class="icon">🎒</div><h3>생존준비</h3><p>필수 장비 구성</p></div>
       <div class="card"><div class="week">2주차</div><div class="icon">🌿</div><h3>자원학</h3><p>식량 확보 전략</p></div>
