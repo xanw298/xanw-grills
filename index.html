@@ -34,11 +34,11 @@
     }
 
     .logo {
-      position: absolute;
-      top: 30px;
-      left: 40px;
-      z-index: 10;
-    }
+  position: fixed;   /* 🔥 핵심 */
+  top: 10px;         /* 더 위로 */
+  left: 30px;
+  z-index: 9999;     /* 무조건 위 */
+}
 
     .logo img {
       height: 140px;
