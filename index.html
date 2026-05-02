@@ -16,6 +16,7 @@
     }
 
     .hero {
+      position: relative;
       min-height: 100vh;
       padding: 32px 7%;
       background:
@@ -27,23 +28,22 @@
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid rgba(244, 234, 208, 0.2);
       padding-bottom: 18px;
     }
 
-    .logo span {
-      font-size: 14px;
-      letter-spacing: 4px;
-      color: #d6b66b;
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      z-index: 10;
     }
 
-    nav a {
-      color: #f4ead0;
-      text-decoration: none;
-      margin-left: 34px;
-      font-weight: 700;
+    .logo img {
+      height: 140px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.7));
     }
 
     .main {
@@ -82,23 +82,51 @@
       background: rgba(58, 76, 24, 0.55);
     }
 
+    .survival-text {
+      padding: 90px 7%;
+      border-top: 1px solid rgba(214, 182, 107, 0.22);
+      border-bottom: 1px solid rgba(214, 182, 107, 0.22);
+      backdrop-filter: blur(6px);
+      background: rgba(10, 18, 8, 0.6);
+    }
+
+    .survival-text-box {
+      max-width: 920px;
+      margin: 0 auto;
+      background: rgba(10, 18, 8, 0.72);
+      border: 1px solid rgba(214, 182, 107, 0.28);
+      border-radius: 22px;
+      padding: 48px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+
+    .survival-text h2 {
+      font-size: 34px;
+      margin: 0 0 28px;
+      color: #d6b66b;
+    }
+
+    .survival-text p {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #e8dec1;
+      margin: 0 0 22px;
+    }
+
+    .survival-final {
+      margin-top: 34px !important;
+      padding-top: 26px;
+      border-top: 1px solid rgba(214, 182, 107, 0.25);
+      color: #9fc653 !important;
+      font-weight: 900;
+      font-size: 22px !important;
+    }
+
     .curriculum-section {
       background: linear-gradient(#182210, #0d1409);
       padding: 70px 7%;
     }
 
-    .logo {
-  position: absolute;
-  top: 30px;
-  left: 40px;
-  z-index: 10;
-}
-
-    .logo img {
-  height: 140px;
-  object-fit: contain;
-}
-    
     .section-title {
       text-align: center;
       font-size: 38px;
@@ -151,59 +179,11 @@
       margin: 0 0 12px;
     }
 
-    .survival-text {
-  background: linear-gradient(#0d1409, #111b0c);
-  padding: 90px 7%;
-  border-top: 1px solid rgba(214, 182, 107, 0.22);
-  border-bottom: 1px solid rgba(214, 182, 107, 0.22);
-}
-
-.survival-text-box {
-  max-width: 920px;
-  margin: 0 auto;
-  background: rgba(10, 18, 8, 0.72);
-  border: 1px solid rgba(214, 182, 107, 0.28);
-  border-radius: 22px;
-  padding: 48px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-}
-
-.survival-text h2 {
-  font-size: 34px;
-  margin: 0 0 28px;
-  color: #d6b66b;
-}
-
-.survival-text p {
-  font-size: 18px;
-  line-height: 1.9;
-  color: #e8dec1;
-  margin: 0 0 22px;
-}
-
-    .survival-text {
-  backdrop-filter: blur(6px);
-  background: rgba(10, 18, 8, 0.6);
-}
-
-.survival-final {
-  margin-top: 34px !important;
-  padding-top: 26px;
-  border-top: 1px solid rgba(214, 182, 107, 0.25);
-  color: #9fc653 !important;
-  font-weight: 900;
-  font-size: 22px !important;
-}
-
     .card p {
       font-size: 15px;
       color: #d8cfad;
       margin: 0;
     }
-
-    .hero {
-  position: relative;
-}
 
     footer {
       background: #070b05;
@@ -214,22 +194,25 @@
     }
 
     @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        text-align: center;
+      .logo {
+        top: 20px;
+        left: 24px;
       }
 
-      nav {
-        margin-top: 12px;
-      }
-
-      nav a {
-        margin: 0 10px;
-        font-size: 14px;
+      .logo img {
+        height: 95px;
       }
 
       .main {
-        margin-top: 80px;
+        margin-top: 120px;
+      }
+
+      .survival-text-box {
+        padding: 30px 24px;
+      }
+
+      .survival-text p {
+        font-size: 16px;
       }
     }
   </style>
@@ -239,10 +222,10 @@
 
   <section class="hero">
     <header>
-  <div class="logo">
-  <img src="logo.png" alt="XANW GRILLS 로고">
-</div>
-</header>
+      <div class="logo">
+        <img src="logo.png" alt="XANW GRILLS 로고">
+      </div>
+    </header>
 
     <div class="main">
       <h1>
@@ -261,39 +244,39 @@
   </section>
 
   <section class="survival-text">
-  <div class="survival-text-box">
-    <h2>적자생존 | 適者生存</h2>
+    <div class="survival-text-box">
+      <h2>적자생존 | 適者生存</h2>
 
-    <p>
-      영국의 철학자 허버트 스펜서가 제시한 용어로,
-      ‘환경에 적응하는 종만이 살아남고, 그렇지 못한 종은 도태되어 사라지는 현상’을 말한다.
-    </p>
+      <p>
+        영국의 철학자 허버트 스펜서가 제시한 용어로,
+        ‘환경에 적응하는 종만이 살아남고, 그렇지 못한 종은 도태되어 사라지는 현상’을 말한다.
+      </p>
 
-    <p>
-      충분한 재난대비가 되어 있는 사람이 생존률이 높은 것은 너무도 당연한 사실이다.
-      적합한 대비가 되어있는 사람이 아니라면, 특정한 상황에서 도태될 수밖에 없으며,
-      도태되는 자들끼리의 생존경쟁은 약육강식이 될 것이다.
-    </p>
+      <p>
+        충분한 재난대비가 되어 있는 사람이 생존률이 높은 것은 너무도 당연한 사실이다.
+        적합한 대비가 되어있는 사람이 아니라면, 특정한 상황에서 도태될 수밖에 없으며,
+        도태되는 자들끼리의 생존경쟁은 약육강식이 될 것이다.
+      </p>
 
-    <p>
-      한국은 도시화가 상당히 진행되고 인구밀도가 높기 때문에 개인이 고립되는 상황을 생각하기 힘들다.
-      또한 공공서비스의 질이 높아 위급상황이 닥치면 경찰, 소방, 군 등의 정부기관이
-      즉시 출동해 인력을 신속하게 지원해주는 것에 익숙해져 있다.
-    </p>
+      <p>
+        한국은 도시화가 상당히 진행되고 인구밀도가 높기 때문에 개인이 고립되는 상황을 생각하기 힘들다.
+        또한 공공서비스의 질이 높아 위급상황이 닥치면 경찰, 소방, 군 등의 정부기관이
+        즉시 출동해 인력을 신속하게 지원해주는 것에 익숙해져 있다.
+      </p>
 
-    <p>
-      그러나 이러한 정부의 대응 체제가 실전에서 제대로 돌아가리라는 보장은 없다.
-      실제 상황에 대한 경험이 충분히 축적되지 못한 경우,
-      대응 체계는 얼마든지 흔들릴 수 있다.
-    </p>
+      <p>
+        그러나 이러한 정부의 대응 체제가 실전에서 제대로 돌아가리라는 보장은 없다.
+        실제 상황에 대한 경험이 충분히 축적되지 못한 경우,
+        대응 체계는 얼마든지 흔들릴 수 있다.
+      </p>
 
-    <p class="survival-final">
-      결국 살아남는 것은 강한 사람이 아니라 준비된 사람이다.
-      위기는 피할 수 없지만, 대비는 선택할 수 있다.
-      지금 준비하는 사람이 끝까지 남는다.
-    </p>
-  </div>
-</section>
+      <p class="survival-final">
+        결국 살아남는 것은 강한 사람이 아니라 준비된 사람이다.
+        위기는 피할 수 없지만, 대비는 선택할 수 있다.
+        지금 준비하는 사람이 끝까지 남는다.
+      </p>
+    </div>
+  </section>
 
   <section class="curriculum-section" id="curriculum">
     <h2 class="section-title">생존 커리큘럼</h2>
