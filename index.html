@@ -15,6 +15,7 @@
       color: #f4ead0;
     }
 
+    /* 🔥 HERO */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -26,30 +27,36 @@
       background-position: center;
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid rgba(244, 234, 208, 0.2);
-      padding-bottom: 18px;
+    /* 🔥 로고 (완전 독립) */
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 7%;
+      z-index: 10;
     }
 
-    header {
-  position: relative;
-  height: 140px;                 
-  border-bottom: 1px solid rgba(244, 234, 208, 0.2);
-}
-
-    .logo {
-  position: absooolute;   
-  top: 0px;         
-  left: 7%;
-  z-index: 10;     
-}
-
     .logo img {
-      height: 280px;
+      height: 280px; /* 🔥 자유롭게 조절 */
       object-fit: contain;
       filter: drop-shadow(0 10px 25px rgba(0,0,0,0.7));
+    }
+
+    /* 🔥 흰색 줄 (완전 독립) */
+    .hero-line {
+      position: absolute;
+      top: 140px; /* 🔥 여기만 바꾸면 위치 이동 */
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(244, 234, 208, 0.2);
+      z-index: 5;
+    }
+
+    /* header 비활성화 */
+    header {
+      height: 0;
+      padding: 0;
+      border: none;
     }
 
     .main {
@@ -88,12 +95,13 @@
       background: rgba(58, 76, 24, 0.55);
     }
 
+    /* 🔥 철학 섹션 */
     .survival-text {
       padding: 90px 7%;
-      border-top: 1px solid rgba(214, 182, 107, 0.22);
-      border-bottom: 1px solid rgba(214, 182, 107, 0.22);
       backdrop-filter: blur(6px);
       background: rgba(10, 18, 8, 0.6);
+      border-top: 1px solid rgba(214, 182, 107, 0.22);
+      border-bottom: 1px solid rgba(214, 182, 107, 0.22);
     }
 
     .survival-text-box {
@@ -108,7 +116,7 @@
 
     .survival-text h2 {
       font-size: 34px;
-      margin: 0 0 28px;
+      margin-bottom: 28px;
       color: #d6b66b;
     }
 
@@ -116,18 +124,19 @@
       font-size: 18px;
       line-height: 1.9;
       color: #e8dec1;
-      margin: 0 0 22px;
+      margin-bottom: 22px;
     }
 
     .survival-final {
-      margin-top: 34px !important;
+      margin-top: 34px;
       padding-top: 26px;
       border-top: 1px solid rgba(214, 182, 107, 0.25);
-      color: #9fc653 !important;
+      color: #9fc653;
       font-weight: 900;
-      font-size: 22px !important;
+      font-size: 22px;
     }
 
+    /* 🔥 커리큘럼 */
     .curriculum-section {
       background: linear-gradient(#182210, #0d1409);
       padding: 70px 7%;
@@ -182,13 +191,12 @@
 
     .card h3 {
       font-size: 24px;
-      margin: 0 0 12px;
+      margin-bottom: 12px;
     }
 
     .card p {
       font-size: 15px;
       color: #d8cfad;
-      margin: 0;
     }
 
     footer {
@@ -199,26 +207,18 @@
       font-weight: 800;
     }
 
+    /* 🔥 모바일 */
     @media (max-width: 700px) {
-      .logo {
-        top: 20px;
-        left: 24px;
+      .logo img {
+        height: 180px;
       }
 
-      .logo img {
-        height: 95px;
+      .hero-line {
+        top: 90px;
       }
 
       .main {
         margin-top: 120px;
-      }
-
-      .survival-text-box {
-        padding: 30px 24px;
-      }
-
-      .survival-text p {
-        font-size: 16px;
       }
     }
   </style>
@@ -227,11 +227,14 @@
 <body>
 
   <section class="hero">
-     <div class="logo">
-        <img src="logo.png" alt="XANW GRILLS 로고">
-      </div>
-    
-    <header> </header>
+
+    <div class="logo">
+      <img src="logo.png" alt="XANW GRILLS 로고">
+    </div>
+
+    <div class="hero-line"></div>
+
+    <header></header>
 
     <div class="main">
       <h1>
@@ -247,39 +250,23 @@
 
       <a href="#curriculum" class="button">커리큘럼 보기</a>
     </div>
+
   </section>
 
   <section class="survival-text">
     <div class="survival-text-box">
       <h2>적자생존 | 適者生存</h2>
 
-      <p>
-        영국의 철학자 허버트 스펜서가 제시한 용어로,
-        ‘환경에 적응하는 종만이 살아남고, 그렇지 못한 종은 도태되어 사라지는 현상’을 말한다.
-      </p>
+      <p>영국의 철학자 허버트 스펜서가 제시한 용어로, 환경에 적응하는 종만이 살아남는다.</p>
 
-      <p>
-        충분한 재난대비가 되어 있는 사람이 생존률이 높은 것은 너무도 당연한 사실이다.
-        적합한 대비가 되어있는 사람이 아니라면, 특정한 상황에서 도태될 수밖에 없으며,
-        도태되는 자들끼리의 생존경쟁은 약육강식이 될 것이다.
-      </p>
+      <p>충분한 대비가 되어 있는 사람이 생존한다. 준비되지 않은 자는 도태될 수밖에 없다.</p>
 
-      <p>
-        한국은 도시화가 상당히 진행되고 인구밀도가 높기 때문에 개인이 고립되는 상황을 생각하기 힘들다.
-        또한 공공서비스의 질이 높아 위급상황이 닥치면 경찰, 소방, 군 등의 정부기관이
-        즉시 출동해 인력을 신속하게 지원해주는 것에 익숙해져 있다.
-      </p>
+      <p>한국은 시스템에 의존하는 구조이지만, 모든 상황에서 그 시스템이 작동한다는 보장은 없다.</p>
 
-      <p>
-        그러나 이러한 정부의 대응 체제가 실전에서 제대로 돌아가리라는 보장은 없다.
-        실제 상황에 대한 경험이 충분히 축적되지 못한 경우,
-        대응 체계는 얼마든지 흔들릴 수 있다.
-      </p>
+      <p>결국 위기 상황에서 개인의 준비가 생존을 결정짓는다.</p>
 
       <p class="survival-final">
-        결국 살아남는 것은 강한 사람이 아니라 준비된 사람이다.
-        위기는 피할 수 없지만, 대비는 선택할 수 있다.
-        지금 준비하는 사람이 끝까지 남는다.
+        살아남는 것은 강한 사람이 아니라 준비된 사람이다.
       </p>
     </div>
   </section>
@@ -289,47 +276,12 @@
     <p class="section-subtitle">기초부터 실전까지, 6주 생존 프로그램</p>
 
     <div class="curriculum">
-      <div class="card">
-        <div class="week">1주차</div>
-        <div class="icon">🎒</div>
-        <h3>생존준비</h3>
-        <p>생존가방, 필수 장비 구성</p>
-      </div>
-
-      <div class="card">
-        <div class="week">2주차</div>
-        <div class="icon">🌿</div>
-        <h3>자원학</h3>
-        <p>물, 식량 확보 전략</p>
-      </div>
-
-      <div class="card">
-        <div class="week">3주차</div>
-        <div class="icon">⛺</div>
-        <h3>거점학</h3>
-        <p>안전한 생존 거점 구축</p>
-      </div>
-
-      <div class="card">
-        <div class="week">4주차</div>
-        <div class="icon">🔥</div>
-        <h3>에너지학</h3>
-        <p>불, 보온, 에너지 활용</p>
-      </div>
-
-      <div class="card">
-        <div class="week">5주차</div>
-        <div class="icon">✚</div>
-        <h3>구급학</h3>
-        <p>응급 상황 대응</p>
-      </div>
-
-      <div class="card">
-        <div class="week">6주차</div>
-        <div class="icon">🧭</div>
-        <h3>이동학</h3>
-        <p>생존 이동 전략</p>
-      </div>
+      <div class="card"><div class="week">1주차</div><div class="icon">🎒</div><h3>생존준비</h3><p>필수 장비 구성</p></div>
+      <div class="card"><div class="week">2주차</div><div class="icon">🌿</div><h3>자원학</h3><p>식량 확보 전략</p></div>
+      <div class="card"><div class="week">3주차</div><div class="icon">⛺</div><h3>거점학</h3><p>거점 구축</p></div>
+      <div class="card"><div class="week">4주차</div><div class="icon">🔥</div><h3>에너지학</h3><p>에너지 활용</p></div>
+      <div class="card"><div class="week">5주차</div><div class="icon">✚</div><h3>구급학</h3><p>응급 대응</p></div>
+      <div class="card"><div class="week">6주차</div><div class="icon">🧭</div><h3>이동학</h3><p>이동 전략</p></div>
     </div>
   </section>
 
