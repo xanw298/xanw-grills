@@ -156,6 +156,54 @@
   box-shadow: 0 12px 30px rgba(0,0,0,0.4); 
   border: 1px solid rgba(214, 182, 107, 0.2);
 }
+
+    .curriculum-banner {
+  position: relative;
+  margin: 0 auto 20px;
+  padding: 30px 0;
+  max-width: 800px;
+  text-align: center;
+}
+
+.curriculum-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("curriculum-bg.jpg") center/cover no-repeat;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.curriculum-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(5, 12, 5, 0.6);
+  z-index: 1;
+}
+
+.curriculum-banner .section-title {
+  position: relative;
+  z-index: 2;
+}
     
     .curriculum-section {
   padding: 90px 7%;
@@ -304,10 +352,12 @@
  </section>
 
   <section class="curriculum-section" id="curriculum">
-    <div class="curriculum-header">
+    <div class="curriculum-banner">
   <h2 class="section-title">생존 커리큘럼</h2>
-  <p class="section-subtitle">기초부터 실전까지, 6주 생존 프로그램</p>
 </div>
+
+<p class="section-subtitle">기초부터 실전까지, 6주 생존 프로그램</p>
+
     
     <div class="curriculum">
       <div class="card"><div class="week">1주차</div><div class="icon">🎒</div><h3>생존준비</h3><p>필수 장비 구성</p></div>
